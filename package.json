@@ -2,7 +2,6 @@
   "name": "Front Page",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://lagpixellol.github.io/front-page",
   "type": "module",
   "scripts": {
     "dev": "vite",
