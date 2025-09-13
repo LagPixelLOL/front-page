@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer base {
+    html, body {
+        @apply bg-black text-white font-sans text-pretty text-shadow-[1.25px_1.25px_3px_rgb(0_0_0_/_0.5)];
+    }
+
+    ::selection {
+        @apply text-black bg-white;
+    }
+
+    a {
+        @apply relative text-indigo-300 hover:text-indigo-400 transition-colors z-0;
+    }
+
+    a::after {
+        content: "";
+        @apply absolute left-0 right-0 bottom-0 bg-lime-500 h-[1px] opacity-0 transition-opacity -z-1;
+    }
+
+    a:hover::after {
+        @apply opacity-100;
+    }
+
+    a::selection {
+        @apply underline decoration-black;
+    }
+}
