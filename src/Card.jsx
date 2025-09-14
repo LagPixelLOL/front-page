@@ -21,7 +21,7 @@ function Card({children}) {
         depth: 10,
         segments: 128,
         radius: 10,
-        tint: null,
+        tint: 0xBBBBBB,
         reflectivity: 1,
         thickness: 50,
         dispersion: 10,
