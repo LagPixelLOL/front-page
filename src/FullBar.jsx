@@ -1,11 +1,20 @@
-import {useMemo, useEffect, useRef} from "react"
+import {useMemo, useEffect, useState, useRef} from "react"
 import {LiquidGlass} from "@specy/liquid-glass-react"
 
 function FullBar({children}) {
+    const [key, setKey] = useState(0);
     const liquidGlassRef = useRef(null);
 
     useEffect(() => {
-        liquidGlassRef?.current.forceUpdate(document.documentElement);
+        const onPageShow = () => setKey(k => k + 1);
+        window.addEventListener("pageshow", onPageShow);
+        return () => window.removeEventListener("pageshow", onPageShow)
+    }, []);
+
+    const targetElement = useMemo(() => document.documentElement, []);
+
+    useEffect(() => {
+        liquidGlassRef?.current.forceUpdate(targetElement);
     });
 
     const glassStyle = useMemo(() => ({
@@ -21,11 +30,12 @@ function FullBar({children}) {
 
     return (
         <LiquidGlass
+            key={key}
             ref={liquidGlassRef}
             glassStyle={glassStyle}
             wrapperStyle={{display: "flex", width: "100%"}}
-            style={"display: flex; align-items: center; width: 100%; height: 4rem; padding: 1rem; margin-left: 1rem; margin-right: 1rem; margin-top: 1rem;"}
-            targetElement={document.documentElement}
+            style={"display: flex; align-items: center; width: 100%; height: 4rem; padding: 1rem;"}
+            targetElement={targetElement}
         >
             {children}
         </LiquidGlass>
