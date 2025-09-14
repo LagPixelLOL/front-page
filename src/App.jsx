@@ -1,9 +1,9 @@
-import backgroundImg from "./assets/background.png"
-import FullBar from "./FullBar.jsx"
 import Card from "./Card.jsx"
-import decodeAPNG from "./apng_decoder.js"
-
+import FullBar from "./FullBar.jsx"
 import {useState, useEffect} from "react"
+import decodeAPNG from "./apng_decoder.js"
+import boykisserImg from "./assets/boykisser.avif"
+import backgroundImg from "./assets/background.png"
 
 function App() {
     const [frameQueue, setFrameQueue] = useState([]);
@@ -47,7 +47,9 @@ function App() {
             </div>
             <div className="flex w-full flex-wrap gap-[1rem] px-[1rem]">
                 <Card>My username is typically v2ray, also known as LagPixelLOL.</Card>
-                <Card>Yura is gay asf.<br/>Imagine using Rust :33:</Card>
+                <Card>
+                    <img className="rounded-[10px] h-[6rem]" src={boykisserImg}></img>
+                </Card>
                 <Card>
                     <p>
                         Email: 2282688304@qq.com<br/>
@@ -58,7 +60,7 @@ function App() {
                 </Card>
                 <Card>Lead of Project Looking Glass, operator of Straylight, searching for Rainbows in Starlights.</Card>
             </div>
-            <footer className="text-center mt-auto py-2.5 font-mono">Made with CUM && React && Tailwind</footer>
+            <footer className="text-center mt-auto py-2.5 font-mono">Made with GEX && React && Tailwind</footer>
         </div>
     )
 }
