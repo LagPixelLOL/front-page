@@ -48,14 +48,14 @@ function App() {
             <div className="flex w-full flex-wrap gap-[1rem] px-[1rem]">
                 <Card>My username is typically v2ray, also known as LagPixelLOL.</Card>
                 <Card>
-                    <img className="rounded-[10px] h-[6rem]" src={boykisserImg}></img>
+                    <a href="https://chat.boikisser.com"><img className="rounded-[10px] h-[6rem]" src={boykisserImg}></img></a>
                 </Card>
                 <Card>
                     <p>
                         Email: 2282688304@qq.com<br/>
-                        GitHub: <a href="https://github.com/LagPixelLOL" target="_blank">LagPixelLOL</a><br/>
-                        HuggingFace: <a href="https://huggingface.co/v2ray" target="_blank">v2ray</a><br/>
-                        Discord: <a href="https://discord.gg/r4Wj97nZ" target="_blank">@v2ray</a>
+                        GitHub: <a href="https://github.com/LagPixelLOL" target="_blank"><span className="link-text">LagPixelLOL</span></a><br/>
+                        HuggingFace: <a href="https://huggingface.co/v2ray" target="_blank"><span className="link-text">v2ray</span></a><br/>
+                        Discord: <a href="https://discord.gg/r4Wj97nZ" target="_blank"><span className="link-text">@v2ray</span></a>
                     </p>
                 </Card>
                 <Card>Lead of Project Looking Glass, operator of Straylight, searching for Rainbows in Starlights.</Card>
