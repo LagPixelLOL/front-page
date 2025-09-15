@@ -8,7 +8,6 @@ export default defineConfig(({command, mode}) => {
     const isDev = command === "serve" || mode === "development";
     console.log(`Development mode: ${isDev}`);
     return {
-        base: "/front-page",
         plugins: [
             react(),
             tailwindcss(),
